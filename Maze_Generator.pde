@@ -4,8 +4,8 @@ Cell[][] grid;
 ArrayList<Cell> stack= new ArrayList<Cell>();
 boolean completed= false, imageSaved= false;
 void setup() {
-  //fullScreen(P2D);
-  size(600, 600, P2D);
+  fullScreen(P2D);
+  //size(600, 600, P2D);
   //strokeWeight(2);
   grid= new Cell[width/l][height/l];
   for (int x=0; x<width/l; x++) {
@@ -34,7 +34,6 @@ void removeWalls(Cell a, Cell b) {
 }
 void draw() {
   background(0);
-  if(key!=' ') return;
   current.visited= true;
   ArrayList<Cell> neighbours= current.neighbours();
   if (neighbours.size()>0) {
